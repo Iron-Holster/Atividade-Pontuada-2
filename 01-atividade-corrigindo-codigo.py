@@ -29,12 +29,18 @@ for i in range(QUANTIDADE_NUMEROS):
         positivos.append(numero) 
 
 
-# Armazenando quantidades
+# Armazenando quantidades & Evitando erro caso quantidade de pares ou impares = 0
 quantidade_pares = len(pares)
 quantidade_impares = len(impares)
 
-media_pares = sum(pares) / quantidade_pares
-media_impares = sum(impares) / quantidade_impares
+if quantidade_pares == 0:
+    media_pares = "Vazio"
+else:
+    media_pares = sum(pares) / quantidade_pares
+if quantidade_impares == 0:
+    media_pares = "Vazio"
+else:
+    media_impares = sum(impares) / quantidade_impares
 
 
 
@@ -46,7 +52,8 @@ print(f"Quantidade de positivos: {len(positivos)}")
 print(f"Quantidade de negativos: {len(negativos)}")
 print(f"Maior número: {max(numeros_geral)}")
 print(f"Menor número: {min(numeros_geral)}")
-print(f"Média dos números pares: {media_pares}")
-print(f"Média dos números ímpares: {media_impares}")
+print(f"Média dos números pares: {media_pares:.2}")
+print(f"Média dos números ímpares: {media_impares:.2}")
 print(f"Média de todos os números: {numeros_geral}")
-print(f"Números na ordem inversa: {reversed(numeros_geral)}")
+numeros_geral.reverse()
+print(f"Números na ordem inversa: {numeros_geral}")
