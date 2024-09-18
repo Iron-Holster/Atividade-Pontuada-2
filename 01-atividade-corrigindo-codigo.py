@@ -15,7 +15,7 @@ for i in range(QUANTIDADE_NUMEROS):
 
     numeros_geral.append(numero)
 
-    # Processando cada número
+    # Filtrando cada número
     if numero % 2 == 0:
         pares.append(numero)
 
@@ -37,6 +37,7 @@ if quantidade_pares == 0:
     media_pares = "Vazio"
 else:
     media_pares = sum(pares) / quantidade_pares
+
 if quantidade_impares == 0:
     media_pares = "Vazio"
 else:
@@ -54,6 +55,6 @@ print(f"Maior número: {max(numeros_geral)}")
 print(f"Menor número: {min(numeros_geral)}")
 print(f"Média dos números pares: {media_pares:.2}")
 print(f"Média dos números ímpares: {media_impares:.2}")
-print(f"Média de todos os números: {numeros_geral}")
+print(f"Média de todos os números: {sum(numeros_geral)/len(numeros_geral)}")
 numeros_geral.reverse()
 print(f"Números na ordem inversa: {numeros_geral}")
