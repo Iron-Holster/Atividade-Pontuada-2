@@ -45,6 +45,7 @@ else:
 
 
 
+
 # Imprimindo as estatísticas
 print("\n=== Estatísticas dos números ===")
 print(f"Quantidade de pares: {len(pares)}")
@@ -55,6 +56,6 @@ print(f"Maior número: {max(numeros_geral)}")
 print(f"Menor número: {min(numeros_geral)}")
 print(f"Média dos números pares: {media_pares:.2}")
 print(f"Média dos números ímpares: {media_impares:.2}")
-print(f"Média de todos os números: {sum(numeros_geral)/len(numeros_geral)}")
+print(f"Média de todos os números: {sum(numeros_geral)/len(numeros_geral):.2}")
 numeros_geral.reverse()
 print(f"Números na ordem inversa: {numeros_geral}")
